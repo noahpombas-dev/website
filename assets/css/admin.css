@@ -1,0 +1,14 @@
+body {
+    background-color: #272b30;
+}
+
+
+h2, label {
+    color: white;
+}
+
+option {
+    font-weight: 700;
+    color: black;
+}
+

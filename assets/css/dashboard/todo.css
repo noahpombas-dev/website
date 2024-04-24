@@ -1,0 +1,21 @@
+.todo-box {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+}
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type=checkbox]:not(:checked) {
+    border: 1px solid black;
+}

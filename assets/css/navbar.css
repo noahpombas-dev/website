@@ -1,0 +1,93 @@
+.nav-hover {
+    position: relative;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+
+.nav-hover:focus:after,
+.nav-hover:hover:after {
+  width: 90%;
+  left: 5%;
+}
+
+
+.nav-hover:after {
+  content: "";
+  bottom: 5px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.first {
+  margin-left: 56vh;
+}
+
+
+.adminlast {
+  margin-right: 40vh;
+}
+
+.active {
+  font-weight: 500;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 991px) {
+  .nav-hover:after{
+    background-color: transparent;
+  }
+  .first {
+    margin-left: 0px!important;
+    margin-top: 20px;
+  }
+  .adminlast {
+    margin-right: 0px!important;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .adminlast {
+    margin-right: 25vh;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .first {
+    margin-left: 40vh;
+  }
+}
+
+@media screen and (max-width: 1232px) {
+  .adminlast {
+    margin-right: 20vh;
+  }
+}
+
+@media screen and (max-width: 1192px) {
+  .first {
+    margin-left: 35vh;
+  }
+  .adminlast {
+    margin-right: 15vh;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .first {
+    margin-left: 25vh;
+  }
+  .adminlast {
+    margin-right: 10vh;
+  }
+}
+
