@@ -13,7 +13,6 @@ if (isset($_POST['infoemail']) && isset($_POST['infousername']) && isset($_POST[
     $email = validate($_POST['infoemail']);
     $username = validate($_POST['infousername']);
     $password = validate($_POST['infopassword']);
-    $lastip = $_SERVER["HTTP_CF_CONNECTING_IP"];
     $role = "user";
     
 
@@ -58,7 +57,7 @@ if (isset($_POST['infoemail']) && isset($_POST['infousername']) && isset($_POST[
                 } else {
                     $hashpass = password_hash($password, PASSWORD_BCRYPT);
 
-                    $sql = "INSERT INTO `Userstable` (`email`, `username`, `password`, `last ip`) VALUES ('$email', '$username', '$hashpass', '$lastip')";
+                    $sql = "INSERT INTO `Userstable` (`email`, `username`, `password`) VALUES ('$email', '$username', '$hashpass')";
                     $result = mysqli_query($conn, $sql);
     
                     $_SESSION['email'] = $email;
