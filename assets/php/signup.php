@@ -66,16 +66,7 @@ if (isset($_POST['infoemail']) && isset($_POST['infousername']) && isset($_POST[
                     $_SESSION['role'] = $role;
                     $_SESSION['lang'] = 'en';
 
-                    include 'seeactivity.php';
 
-
-                    
-                    $location = $geolocation_data['region'] . " / " . $geolocation_data['city'];
-                    $userbrowser = $browser_info['browser'];
-                    $userdevice = $browser_info['platform'];
-
-                    $sql = "INSERT INTO `useractivity` (`reason`, `username`, `location`, `browser`, `device`, `ip`) VALUES ('Account Created Successfully', '$username', '$location', '$userbrowser', '$userdevice', '$lastip')";
-                    $result = mysqli_query($conn, $sql);
     
                     header("Location: ../../../dashboard");
                 }
