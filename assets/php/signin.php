@@ -137,11 +137,6 @@ if (isset($_POST['infousername']) && isset($_POST['infopassword'])) {
 
                 
 
-                $email = $row['email'];
-                $lastip = $_SERVER["HTTP_CF_CONNECTING_IP"];
-                $sql = "UPDATE users SET `last ip` = '$lastip' WHERE username = '$username' AND email = '$email'";
-                $result = mysqli_query($conn, $sql);
-
                 echo '<script> window.location.replace("../../dashboard")</script>';
 
                 exit();
