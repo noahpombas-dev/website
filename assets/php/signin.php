@@ -13,7 +13,6 @@ session_start();
 
 
 include "db_conn.php";
-include "seeactivity.php";
 
 if (isset($_POST['infousername']) && isset($_POST['infopassword'])) {
 
